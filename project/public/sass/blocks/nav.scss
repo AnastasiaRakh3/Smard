@@ -1,0 +1,31 @@
+.nav {
+  @include list-reset;
+  padding: 20px 0;
+}
+
+.nav__item {
+  margin-bottom: 10px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  color: $basic-main;
+  opacity: 0.5;
+  text-decoration: none;
+
+  &--current {
+    padding-left: 47px;
+    border-left: solid 3px $basic-main;
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.nav__text {
+  margin-left: 15px;
+}

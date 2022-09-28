@@ -1,0 +1,22 @@
+.tools {
+  @include list-reset;
+  display: flex;
+  justify-content: end;
+  width: 300px;
+}
+
+.tools__item:not(:first-child) {
+  border-left: solid 1px $basic-shadow;
+}
+
+.tools__link {
+  display: flex;
+  padding: 5px 10px;
+  opacity: 0.5;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+

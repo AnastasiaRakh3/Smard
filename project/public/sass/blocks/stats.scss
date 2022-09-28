@@ -1,0 +1,57 @@
+.stats {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.stats__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px 20px 20px;
+  border-radius: 10px;
+  color: $basic-main2;
+  text-transform: uppercase;
+  box-shadow: $box-shadow;
+  transition: 1.5s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../img/chart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--clicks {
+    background-color: $stats1;
+  }
+
+  &--impressions {
+    background-color: $stats2;
+  }
+
+  &--enquiries {
+    background-color: $stats3;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.stats__name {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.stats__count {
+  font-size: 40px;
+  font-weight: 500;
+}
