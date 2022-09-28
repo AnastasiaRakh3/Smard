@@ -1,0 +1,22 @@
+.board {
+  display: grid;
+  align-content: start;
+  grid-template-columns: 31% 1fr;
+  grid-template-rows: auto auto 250px;
+  padding: 25px 50px;
+  background-color: $basic-background;
+}
+
+.board__heading {
+  grid-column: 1/-1;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.board__stats {
+  grid-column: 1/-1;
+}
+
+.board__chart {
+  margin-left: 20px;
+}
