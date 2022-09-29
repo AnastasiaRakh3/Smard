@@ -1,12 +1,11 @@
 /* Global */
 @import "../public/sass/global/fonts.scss";
-@import "../public/sass/global/globals.scss";
 @import "../public/sass/global/mixins.scss";
 @import "../public/sass/global/variables.scss";
 @import "../public/sass/global/colors.scss";
+@import "../public/sass/global/globals.scss";
 
 /* Blocks */
-@import "../public/sass/blocks/page.scss";
 @import "../public/sass/blocks/page-header.scss";
 @import "../public/sass/blocks/logo.scss";
 @import "../public/sass/blocks/user.scss";
@@ -18,4 +17,3 @@
 @import "../public/sass/blocks/stats.scss";
 @import "../public/sass/blocks/analytics.scss";
 @import "../public/sass/blocks/chart.scss";
-
