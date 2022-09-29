@@ -8,6 +8,7 @@
 }
 
 .nav__link {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0 50px;
@@ -24,8 +25,36 @@
   &:hover {
     opacity: 1;
   }
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--dashboard::before {
+    background-image: url("../../img/house.svg");
+  }
+
+  &--enquiries::before {
+    background-image: url("../../img/enquiries.svg");
+  }
+
+  &--buy-sell::before {
+    background-image: url("../../img/cart.svg");
+  }
+
+  &--spreadsheet::before {
+    background-image: url("../../img/spreadsheet.svg");
+  }
+
+  &--help::before {
+    background-image: url("../../img/help.svg");
+  }
 }
 
 .nav__text {
-  margin-left: 15px;
+  margin-left: 10px;
 }

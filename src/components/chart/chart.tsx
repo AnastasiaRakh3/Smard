@@ -1,12 +1,10 @@
 import { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { curveCardinal } from 'd3-shape';
 
 import { formatDataToChart } from '../../utils';
 import { portfolioData } from '../../mocks/portfolio';
 
 const data = formatDataToChart(portfolioData);
-const cardinal = curveCardinal.tension(0.2);
 
 class ChartCanvas extends PureComponent {
 
@@ -26,13 +24,12 @@ class ChartCanvas extends PureComponent {
           <XAxis dataKey="date" />
           <YAxis dataKey="amount" unit="$" />
           <Tooltip />
-          <Area type={cardinal} dataKey="amount" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.3} />
+          <Area type="monotone" dataKey="amount" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.3} />
         </AreaChart>
       </ResponsiveContainer>
     );
   }
 }
-
 
 export default function Chart(): JSX.Element {
   return (
