@@ -26,7 +26,8 @@ body {
   color: $basic-main;
 }
 
-body div {
+#root {
+  height: 100%;
   display: grid;
   grid-template-columns: 250px 1fr;
 }
