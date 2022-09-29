@@ -31,7 +31,6 @@ class ChartCanvas extends PureComponent {
   }
 }
 
-
 export default function Chart(): JSX.Element {
   return (
     <section className="board__chart chart">

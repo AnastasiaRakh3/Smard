@@ -3,8 +3,7 @@ import { formatName } from '../../utils';
 import { navItemsOrder } from '../../const';
 
 export default function PageHeader(): JSX.Element {
-  const [currentItem, setCurrentItem] = useState<string | null>(navItemsOrder[0]);
-
+  const [currentItem, setCurrentItem] = useState<string>(navItemsOrder[0]);
   const checkItem = (item: string) => item === currentItem ? 'nav__link--current' : '';
 
   return (
