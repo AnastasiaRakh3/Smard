@@ -1,17 +1,10 @@
 import analyticsData from './mocks/analytics.json';
 
-type AnalyticsItem = {
-  message: AnalyticsMessage | string;
-  status_code?: number;
-}
+import { AnalyticsItemType } from './types/data';
 
-type AnalyticsMessage = {
-  [key: string]: string;
-}
+const adaptAnalyticsFromServer = (data: AnalyticsItemType[]) => {
 
-const adaptFromServer = (data: AnalyticsItem[]) => {
-
-  const result = data.map((obj: AnalyticsItem) => {
+  const result = data.map((obj: AnalyticsItemType) => {
 
     const adaptedData = {
       ...obj,
@@ -25,6 +18,6 @@ const adaptFromServer = (data: AnalyticsItem[]) => {
   return result;
 };
 
-const adaptedData = adaptFromServer(analyticsData);
+const adaptedData = adaptAnalyticsFromServer(analyticsData);
 
 export { adaptedData };

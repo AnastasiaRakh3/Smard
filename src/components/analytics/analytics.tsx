@@ -1,17 +1,15 @@
 import { getRandomInteger } from '../../utils';
-import { AnalyticsType } from '../../types/data';
 import { toast } from 'react-toastify';
-import { analytics } from '../../mocks/analytics';
 import { useState } from 'react';
 import { adaptedData } from '../../server';
+import { AnalyticsItemType } from '../../types/data';
 
 export default function Analytics(): JSX.Element {
-  console.log(adaptedData);
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
-  const [message, setMessage] = useState<null | AnalyticsType>(null);
+  const [message, setMessage] = useState<null | AnalyticsItemType>(null);
 
-  const renderMessage = (response: AnalyticsType | null) => {
+  const renderMessage = (response: AnalyticsItemType | null) => {
     if (response) {
       return (
         <div className="analytics__message">
@@ -22,7 +20,7 @@ export default function Analytics(): JSX.Element {
   };
 
   const handleClick = () => {
-    const response = analytics[getRandomInteger(0, analytics.length - 1)];
+    const response = adaptedData[getRandomInteger(0, adaptedData.length - 1)];
     if (response.statusCode === 401) {
       toast.warning('Authorization required');
       setShowMessage(false);
