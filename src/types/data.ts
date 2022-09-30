@@ -7,11 +7,11 @@ export type FormattedPortfolioType = {
   amount: number;
 };
 
-export type MessageType = {
+type AnalyticsMessageType = {
   [key: string]: string;
-};
+}
 
-export type AnalyticsType = {
-  message: string | MessageType;
-  statusCode: number;
-};
+export type AnalyticsItemType = {
+  message: AnalyticsMessageType | string;
+  status_code?: number;
+}

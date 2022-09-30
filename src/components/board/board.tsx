@@ -1,5 +1,5 @@
 import Stats from '../stats/stats';
-import Analytics from '../analytics/analitycs';
+import Analytics from '../analytics/analytics';
 import Chart from '../chart/chart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
