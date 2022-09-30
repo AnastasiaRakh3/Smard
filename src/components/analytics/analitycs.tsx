@@ -3,8 +3,10 @@ import { AnalyticsType } from '../../types/data';
 import { toast } from 'react-toastify';
 import { analytics } from '../../mocks/analytics';
 import { useState } from 'react';
+import { adaptedData } from '../../server';
 
 export default function Analytics(): JSX.Element {
+  console.log(adaptedData);
 
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [message, setMessage] = useState<null | AnalyticsType>(null);
