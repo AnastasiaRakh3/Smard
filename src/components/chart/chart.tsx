@@ -2,9 +2,9 @@ import { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 import { formatDataToChart } from '../../utils';
-import { portfolioData } from '../../mocks/portfolio';
+import { portfolioDataParsed } from '../../server';
 
-const data = formatDataToChart(portfolioData);
+const data = formatDataToChart(portfolioDataParsed);
 
 class ChartCanvas extends PureComponent {
 

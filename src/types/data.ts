@@ -2,11 +2,6 @@ export type PortfolioType = {
   [key: string]: number;
 };
 
-export type FormattedPortfolioType = {
-  date: string;
-  amount: number;
-};
-
 type AnalyticsMessageType = {
   [key: string]: string;
 }

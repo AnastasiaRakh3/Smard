@@ -1,7 +1,7 @@
 import { getRandomInteger } from '../../utils';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
-import { adaptedData } from '../../server';
+import { adaptedAnalyticsData } from '../../server';
 import { AnalyticsItemType } from '../../types/data';
 
 export default function Analytics(): JSX.Element {
@@ -20,7 +20,7 @@ export default function Analytics(): JSX.Element {
   };
 
   const handleClick = () => {
-    const response = adaptedData[getRandomInteger(0, adaptedData.length - 1)];
+    const response = adaptedAnalyticsData[getRandomInteger(0, adaptedAnalyticsData.length - 1)];
     if (response.statusCode === 401) {
       toast.warning('Authorization required');
       setShowMessage(false);
