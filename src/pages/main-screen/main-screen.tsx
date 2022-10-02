@@ -1,16 +1,15 @@
 import PageHeader from '../../components/page-header/page-header';
 import MainHeader from '../../components/main-header/main-header/main-header';
 import Board from '../../components/board/board';
-import { Fragment } from 'react';
 
 export default function MainScreen(): JSX.Element {
   return (
-    <Fragment>
+    <div className='page'>
       < PageHeader />
-      <main className="main">
+      <main className="main main--index">
         < MainHeader />
         <Board />
       </main>
-    </Fragment>
+    </div>
   );
 }
