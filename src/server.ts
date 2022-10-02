@@ -1,11 +1,12 @@
-import analyticsData from './mocks/analytics.json';
-
+import { analyticsDataJson } from './mocks/analytics';
 import { AnalyticsItemType } from './types/data';
 
+const analyticsDataParsed = JSON.parse(
+  analyticsDataJson
+) as AnalyticsItemType[];
+
 const adaptAnalyticsFromServer = (data: AnalyticsItemType[]) => {
-
   const result = data.map((obj: AnalyticsItemType) => {
-
     const adaptedData = {
       ...obj,
       statusCode: obj['status_code'],
@@ -18,6 +19,6 @@ const adaptAnalyticsFromServer = (data: AnalyticsItemType[]) => {
   return result;
 };
 
-const adaptedData = adaptAnalyticsFromServer(analyticsData);
+const adaptedData = adaptAnalyticsFromServer(analyticsDataParsed);
 
 export { adaptedData };

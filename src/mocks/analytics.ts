@@ -1,4 +1,4 @@
-[
+export const analyticsDataJson = `[
   {
     "message": {
       "Прибыль": "176.72%",
@@ -10,4 +10,4 @@
     "message": "Authorization required",
     "status_code": 401
   }
-]
+]`;
