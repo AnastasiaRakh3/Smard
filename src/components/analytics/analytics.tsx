@@ -34,7 +34,7 @@ export default function Analytics(): JSX.Element {
     <section className="board__analytics analytics">
       <h3 className="visually-hidden">Analytics</h3>
       <button className="analytics__btn" onClick={handleClick}>Get analytics</button>
-      {showMessage ? renderMessage(message) : null}
+      {showMessage && renderMessage(message)}
     </section>
   );
 }

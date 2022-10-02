@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { formatName } from '../../utils';
-import { navItemsOrder } from '../../const';
+import { DEFAULT_NAV_ITEMS } from '../../const';
 
 export default function PageHeader(): JSX.Element {
-  const [currentItem, setCurrentItem] = useState<string>(navItemsOrder[0]);
-  const checkItem = (item: string) => item === currentItem ? 'nav__link--current' : '';
+  const [currentItem, setCurrentItem] = useState<string>(DEFAULT_NAV_ITEMS[0]);
+  const checkLink = (item: string) => item === currentItem ? 'nav__link--current' : '';
 
   return (
     <header className="page-header">
@@ -17,9 +17,12 @@ export default function PageHeader(): JSX.Element {
       </div>
 
       <ul className="page-header__nav nav">
-        {navItemsOrder.map((item) => (
+        {DEFAULT_NAV_ITEMS.map((item) => (
           <li key={item} className="nav__item" onClick={() => setCurrentItem(item)}>
-            <a className={`nav__link nav__link--${item} ${checkItem(item)}`} href="#!">
+            <a
+              className={`nav__link nav__link--${item} ${checkLink(item)}`}
+              href="#!"
+            >
               <span className="nav__text">{formatName(item)}</span>
             </a>
           </li>
