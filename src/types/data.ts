@@ -13,5 +13,10 @@ type AnalyticsMessageType = {
 
 export type AnalyticsItemType = {
   message: AnalyticsMessageType | string;
-  status_code?: number;
+  status_code: number;
+};
+
+export type AnalyticsItemAdaptedType = {
+  message: AnalyticsMessageType | string;
+  statusCode: number;
 };

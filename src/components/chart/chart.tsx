@@ -8,7 +8,7 @@ import { formatDataToChart } from '../../utils';
 
 export default function Chart(): JSX.Element {
 
-  const [data, setData] = useState<PortfolioAdaptedType[]>();
+  const [data, setData] = useState<PortfolioAdaptedType[]>([]);
   const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
@@ -16,7 +16,9 @@ export default function Chart(): JSX.Element {
 
     const response = await new Promise<string>((resolve) => {
       setTimeout(() => resolve(portfolioDataJson), 1000);
-    }).then((result) => JSON.parse(result) as PortfolioType).then((result) => formatDataToChart(result));
+    })
+      .then((result) => JSON.parse(result) as PortfolioType)
+      .then((result) => formatDataToChart(result));
 
     setData(response);
     setLoading(false);

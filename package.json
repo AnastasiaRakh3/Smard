@@ -28,8 +28,7 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
-      "htmlacademy/react-typescript"
+      "react-app/jest"
     ],
     "parserOptions": {
       "project": "tsconfig.json",
@@ -58,7 +57,6 @@
     "@types/react-redux": "^7.1.24",
     "@types/react-transition-group": "^4.4.5",
     "axios-mock-adapter": "^1.21.2",
-    "eslint-config-htmlacademy": "^7.0.0",
     "redux-devtools-extension": "^2.13.9",
     "typescript": "^4.8.4"
   }
