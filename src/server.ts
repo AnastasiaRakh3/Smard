@@ -1,6 +1,5 @@
 import { analyticsDataJson } from './mocks/analytics';
-import { portfolioDataJson } from './mocks/portfolio';
-import { AnalyticsItemType, PortfolioType } from './types/data';
+import { AnalyticsItemType } from './types/data';
 
 const analyticsDataParsed = JSON.parse(
   analyticsDataJson
@@ -22,8 +21,4 @@ const adaptAnalyticsFromServer = (data: AnalyticsItemType[]) => {
 
 const adaptedAnalyticsData = adaptAnalyticsFromServer(analyticsDataParsed);
 
-const portfolioDataParsed = JSON.parse(
-  portfolioDataJson
-) as PortfolioType;
-
-export { adaptedAnalyticsData, portfolioDataParsed };
+export { adaptedAnalyticsData };
