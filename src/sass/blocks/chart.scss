@@ -1,8 +1,22 @@
 .chart {
   height: 250px;
   position: relative;
-  font-size: 12px;
+  font-size: 10px;
   background-color: $basic-background2;
   border-radius: 10px;
   box-shadow: $box-shadow;
+}
+
+.chart__tooltip {
+  padding: 10px;
+  font-size: 13px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(130, 202, 157, 0.7);
+  border-radius: 10px;
+
+}
+
+.chart__tooltip p {
+  margin: 0;
+  text-align: center;
 }
