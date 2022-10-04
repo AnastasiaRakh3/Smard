@@ -1,7 +1,8 @@
-import dayjs from 'dayjs';
-import { AnalyticsItemType, PortfolioType } from './types/data';
+import dayjs from "dayjs";
+import { AnalyticsItemType, PortfolioType } from "./types/data";
 
-const formatDateToChart = (date: string) => dayjs(date).format('DD.MM');
+const formatDateToChart = (date: string) => dayjs(date).format("DD.MM");
+const formatDateToPopup = (date: string) => dayjs(date).format("DD.MM.YYYY");
 
 const formatDataToChart = (data: PortfolioType) => {
   const formatedData = [];
@@ -10,6 +11,7 @@ const formatDataToChart = (data: PortfolioType) => {
     const obj = {
       date: formatDateToChart(key),
       amount: value,
+      dateForPopup: formatDateToPopup(key),
     };
 
     formatedData.push(obj);
@@ -19,11 +21,11 @@ const formatDataToChart = (data: PortfolioType) => {
 };
 
 const formatName = (name: string) => {
-  if (name.includes('-')) {
+  if (name.includes("-")) {
     return name
-      .split('-')
+      .split("-")
       .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
-      .join('/');
+      .join("/");
   }
   return name.charAt(0).toUpperCase() + name.slice(1);
 };
