@@ -1,8 +1,7 @@
 .board {
   display: grid;
   align-content: start;
-  grid-template-columns: 31% 1fr;
-  grid-template-rows: auto auto 250px;
+  grid-template-columns: 31% 69%;
   padding: 25px 50px;
   background-color: $basic-background;
 }

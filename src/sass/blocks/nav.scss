@@ -35,23 +35,23 @@
   }
 
   &--dashboard::before {
-    background-image: url("../../img/house.svg");
+    background-image: url("../../../public/img/house.svg");
   }
 
   &--enquiries::before {
-    background-image: url("../../img/enquiries.svg");
+    background-image: url("../../../public/img/enquiries.svg");
   }
 
   &--buy-sell::before {
-    background-image: url("../../img/cart.svg");
+    background-image: url("../../../public/img/cart.svg");
   }
 
   &--spreadsheet::before {
-    background-image: url("../../img/spreadsheet.svg");
+    background-image: url("../../../public/img/spreadsheet.svg");
   }
 
   &--help::before {
-    background-image: url("../../img/help.svg");
+    background-image: url("../../../public/img/help.svg");
   }
 }
 

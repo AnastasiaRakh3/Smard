@@ -1,17 +1,9 @@
-const navItems = {
-  DASHBOARD: 'dashboard',
-  ENQUIRIES: 'enquiries',
-  BUY_SELL: 'buy-sell',
-  SPREADSHEET: 'spreadsheet',
-  HELP: 'help',
-};
+const DEFAULT_NAV_ITEMS = [
+  'dashboard',
+  'enquiries',
+  'buy-sell',
+  'spreadsheet',
+  'help',
+] as const;
 
-const navItemsOrder = [
-  navItems.DASHBOARD,
-  navItems.ENQUIRIES,
-  navItems.BUY_SELL,
-  navItems.SPREADSHEET,
-  navItems.HELP,
-];
-
-export { navItemsOrder };
+export { DEFAULT_NAV_ITEMS };

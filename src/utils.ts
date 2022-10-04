@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
-import { PortfolioType } from './types/data';
+import { AnalyticsItemType, PortfolioType } from './types/data';
 
-const formatDateToChart = (date: string) => dayjs(date).format('DD-MM');
+const formatDateToChart = (date: string) => dayjs(date).format('DD.MM');
 
 const formatDataToChart = (data: PortfolioType) => {
   const formatedData = [];
@@ -34,4 +34,17 @@ const getRandomInteger = (a = 0, b = 1) => {
   return Math.floor(lower + Math.random() * (upper - lower + 1));
 };
 
-export { formatDataToChart, formatName, getRandomInteger };
+const adaptAnalyticsFromServer = (data: AnalyticsItemType[]) =>
+  /*eslint-disable */
+  data.map(({ status_code, ...item }) => ({
+    ...item,
+    statusCode: status_code,
+  }));
+/*eslint-disable */
+
+export {
+  formatDataToChart,
+  formatName,
+  getRandomInteger,
+  adaptAnalyticsFromServer,
+};
