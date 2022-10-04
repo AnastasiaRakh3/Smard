@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import { AnalyticsItemType, PortfolioType } from './types/data';
 
-const formatDateToChart = (date: string) => dayjs(date).format('DD-MM');
+const formatDateToChart = (date: string) => dayjs(date).format('DD.MM');
 
 const formatDataToChart = (data: PortfolioType) => {
   const formatedData = [];

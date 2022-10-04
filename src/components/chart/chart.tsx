@@ -1,33 +1,13 @@
-import { PureComponent, useEffect, useState } from 'react';
+import { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
+import useChart from '../../hooks/useChart';
 import Loading from '../loading/loading';
-import { portfolioDataJson } from '../../mocks/portfolio';
-import { PortfolioAdaptedType, PortfolioType } from '../../types/data';
-import { formatDataToChart } from '../../utils';
 
 export default function Chart(): JSX.Element {
 
-  const [data, setData] = useState<PortfolioAdaptedType[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchData = async () => {
-    setLoading(true);
-
-    const response = await new Promise<string>((resolve) => {
-      setTimeout(() => resolve(portfolioDataJson), 1000);
-    })
-      .then((result) => JSON.parse(result) as PortfolioType)
-      .then((result) => formatDataToChart(result));
-
-    setData(response);
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
+  const { data, loading } = useChart();
+  
   class ChartCanvas extends PureComponent {
     render() {
       return (
