@@ -37,12 +37,10 @@ const getRandomInteger = (a = 0, b = 1) => {
 };
 
 const adaptAnalyticsFromServer = (data: AnalyticsItemType[]) =>
-  /*eslint-disable */
   data.map(({ status_code, ...item }) => ({
     ...item,
     statusCode: status_code,
   }));
-/*eslint-disable */
 
 export {
   formatDataToChart,
